@@ -7,7 +7,6 @@ class Cliente(models.Model):
     rg = models.CharField(max_length=9)
     celular = models.CharField(max_length=14)
     ativo = models.BooleanField()
-    foto = models.ImageField(blank=True)
-
+    foto = models.FileField(blank=True, default='')
     def __str__(self):
         return self.nome
